@@ -1,0 +1,414 @@
+{
+    "info": {
+        "name": "Login API Test Cases",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Ba\u015far\u0131l\u0131 Giri\u015f",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"admin\", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Hatal\u0131 Giri\u015f",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"wronguser\", \"password\": \"wrongpass\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Bo\u015f Kullan\u0131c\u0131 Ad\u0131",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"\", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Bo\u015f Parola",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"admin\", \"password\": \"\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "SQL Injection",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"' OR '1'='1\", \"password\": \"' OR '1'='1\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Uzun Kullan\u0131c\u0131 Ad\u0131",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "\u00d6zel Karakterler",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"@dm!n\", \"password\": \"!@#$%\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "B\u00fcy\u00fck/K\u00fc\u00e7\u00fck Harf Duyarl\u0131l\u0131\u011f\u0131",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"Admin\", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "XSS Injection (Kullan\u0131c\u0131 Ad\u0131)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"<script>alert('XSS')</script>\", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "XSS Injection (Parola)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"admin\", \"password\": \"<script>alert('XSS')</script>\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "JavaScript Injection",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"admin\", \"password\": \"'); alert('Hacked'); ('\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "HTML Injection",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"<b>Hacked</b>\", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Sadece Bo\u015fluk Karakteri",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"     \", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "SQL Injection with Comment",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"admin' --\", \"password\": \"1234\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:5000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
